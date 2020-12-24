@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Drini Cuprija - Knjizare Lava </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- ------------------- header ----------- -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="slike/logo.png" alt="Logo Knjizare" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="knjige.html">Knjige</a></li>
+                    <li><a href="">O nama</a></li>
+                </ul>
+            </nav>
+            <img src="slike/account.png" class="acc" id="acc">
+            <img src="slike/cart.png" class="shoppingCart">
+            <img src="slike/menu.png" class="menu-icon" onclick="closeMenu()">
+        </div>
+    </div>
+
+
+<!-- -------------- main ----------------------- -->
+    
+
+    <main>
+        <div class="container single-product">
+            <div class="row">
+                <col-2>
+                    <img src="slike/cuprija.jpg">
+                </col-2>
+                <div class="col-2">
+                    <p>Home / Book</p>
+                    <h1>Na Drini Cuprija</h1>
+                    <p class="authon"><i>-Ivo Andric-</i></p>
+                    <h4>Cena: <span>899,99 RSD</span></h4>
+                    <input type="number" value="1">
+                    <a class="btn">Dodaj U Korpu</a>
+
+                    <h4>O Knjizi</h4>
+                    <p> <i> Na Drini ćuprija je poveesni roman Ive Andrića. Delo je napisano i prvi put objavljeno 1945. godine.Roman je napisan na srpskoj ekavici. 
+                        Sintaksa mu je svojstvena katkad hrvatskom jeziku. Izražaj je prilično jednostavan i lako razumljiv. U djelu nalazimo mnogo primjera narodnih elemenata, 
+                        od pjesama i legendi do običaja i svjetonazora. Velika važnost se pridaje opisima, kako vanjskim tako i psihološkim.</i> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 class="title">Slicne knjige</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="slike/cuprija.jpg">
+                    <h4>Na Drini Cuprija </h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>Cena: <span>899,99 RSD</span></p>
+                </div>
+                <div class="col-4">
+                    <img src="slike/necista_krv.jpg">
+                    <h4>Necista Krv</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Cena:<span> 1299,99 RSD</span></p>
+                </div>
+                <div class="col-4">
+                    <img src="slike/evgenije.jpg">
+                    <h4>Evgenije Onjegin</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Cena:<span> 1499,99 RSD</span></p>
+                </div>
+                <div class="col-4">
+                    <img src="slike/zlocin_i_kazna_.jpg">
+                    <h4>Zlocin i Kazna</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Cena: <span> 599,99 RSD</span></p>
+                </div>
+                <div class="col-4">
+                    <img src="slike/seobe.jpg">
+                    <h4>Seobe</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>Cena:<span> 1599,99 RSD</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!---------------footer---------------->
+
+    <footer>    
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <h1>Knjizare Lava</h1>
+                    <img src="slike/logo.png" alt="Logo" width="100px" height="100px">
+                    <p>Nasa namena je da obezbedimo kupcima veliki asortiman razlicitog knjizevnog <br>   sadrzaja i strucnih literatura </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Preuzmite nasu aplikaciju</h3>
+                    <p>Preuzmite aplikaciju za Android i IOS uredjaje</p>
+                    <div class="app-logo">
+                        <img src="slike/app-store.png">
+                        <img src="slike/play-store.png">
+                    </div>
+                </div>
+ 
+                <div class="footer-col-3">
+                    <h3>Zapratite nas</h3>
+                    <ul>
+                        <li> <a href=""> Facebook </a></li>
+                        <li><a href="">Instagram </a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; Copyright 2020 - Knjizare Lava </p>
+        </div>
+    </footer>
+
+
+    <!-- ---------------js------------------>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

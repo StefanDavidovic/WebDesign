@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na Drini Cuprija - Knjizare Lava </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- ------------------- header ----------- -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="slike/logo.png" alt="Logo Knjizare" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="knjige.html">Knjige</a></li>
+                    <li><a href="">O nama</a></li>
+                </ul>
+            </nav>
+            <img src="slike/account.png" class="acc" id="acc">
+            <img src="slike/cart.png" class="shoppingCart">
+            <img src="slike/menu.png" class="menu-icon" onclick="closeMenu()">
+        </div>
+    </div>
+
+
+<!-- -------------- main ----------------------- -->
+    
+
+    <main>
+
+        <div class="container cart-page">
+            <table>
+                <tr>
+                    <th>Korisnici</th>
+                    <th>Tip Korisnika</th>
+                    <th>Funkcije</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="slike/admin1.jpg" width="200px">
+                            <div>
+                                <p>Jack Frost</p>
+                                <small><i>jackandjones</i></small> <br>
+                                <small><i>07.03.1992 </i></small>
+                                
+                                
+                            </div>
+                        </div>
+                    </td>
+                    <td>Administrator</td>
+                    <td>
+                        <a href="#"><img src="slike/edit.png" id="edit"></a>
+                        <a href="#"><img src="slike/kanta.png" id="kanta"></a>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="slike/user1.jpg" width="200px">
+                            <div>
+                                <p>Elizabeth Harmon</p>
+                                <small><i>eliharmon</i></small> <br>
+                                <small><i>13.04.1984 </i></small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Korisnik</td>
+                    <td>
+                        <a href="#"><img src="slike/edit.png" id="edit"></a>
+                        <a href="#"><img src="slike/kanta.png" id="kanta"></a>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="slike/user2.jfif" width="200px">
+                            <div>
+                                <p>John Wick</p>
+                                <small><i>jwick</i></small> <br>
+                                <small><i>25.12.1976 </i></small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Korisnik</td>
+                    <td>
+                        <a href="#"><img src="slike/edit.png" id="edit"></a>
+                        <a href="#"><img src="slike/kanta.png" id="kanta"></a>                   
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="slike/admin1.jpg" width="200px">
+                            <div>
+                                <p>Jack Frost</p>
+                                <small><i>jackandjones</i></small> <br>
+                                <small><i>07.03.1992 </i></small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Administrator</td>
+                    <td>
+                        <a href="#"><img src="slike/edit.png" id="edit"></a>
+                        <a href="#"><img src="slike/kanta.png" id="kanta"></a>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="slike/user1.jpg" width="200px">
+                            <div>
+                                <p>Elizabeth Harmon</p>
+                                <small><i>eliharmon</i></small> <br>
+                                <small><i>13.04.1984 </i></small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Korisnik</td>
+                    <td>
+                        <a href="#"><img src="slike/edit.png" id="edit"></a>
+                        <a href="#"><img src="slike/kanta.png" id="kanta"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="slike/user2.jfif" width="200px">
+                            <div>
+                                <p>John Wick</p>
+                                <small><i>jwick</i></small> <br>
+                                <small><i>25.12.1976 </i></small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>Korisnik</td>
+                    <td>
+                        <a href="#"><img src="slike/edit.png" id="edit"></a>
+                        <a href="#"><img src="slike/kanta.png" id="kanta"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!---------------footer---------------->
+
+    <footer>    
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <h1>Knjizare Lava</h1>
+                    <img src="slike/logo.png" alt="Logo" width="100px" height="100px">
+                    <p>Nasa namena je da obezbedimo kupcima veliki asortiman razlicitog knjizevnog <br>   sadrzaja i strucnih literatura </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Preuzmite nasu aplikaciju</h3>
+                    <p>Preuzmite aplikaciju za Android i IOS uredjaje</p>
+                    <div class="app-logo">
+                        <img src="slike/app-store.png">
+                        <img src="slike/play-store.png">
+                    </div>
+                </div>
+ 
+                <div class="footer-col-3">
+                    <h3>Zapratite nas</h3>
+                    <ul>
+                        <li> <a href=""> Facebook </a></li>
+                        <li><a href="">Instagram </a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; Copyright 2020 - Knjizare Lava </p>
+        </div>
+    </footer>
+
+
+    <!-- ---------------js------------------>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

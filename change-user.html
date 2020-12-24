@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izmena Korisnika - Knjizare Lava </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- ------------------- header ----------- -->
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="slike/logo.png" alt="Logo Knjizare" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Pocetna</a></li>
+                    <li><a href="knjige.html">Knjige</a></li>
+                    <li><a href="">O nama</a></li>
+                </ul>
+            </nav>
+            <img src="slike/account.png" class="acc" id="acc">
+            <img src="slike/cart.png" class="shoppingCart">
+            <img src="slike/menu.png" class="menu-icon" onclick="closeMenu()">
+        </div>
+    </div>
+
+
+<!-- -------------- main ----------------------- -->
+    
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="form">
+                    <form>
+                        <h1>Izmena detalja o korisnicima</h1>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="name">Ime*</label>
+                                    <input type="text" name="name">
+                                </td>
+                                <td>
+                                    <label for="lastname">Prezime*</label>
+                                    <input type="text" name="lastname">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="address">Adresa*</label>
+                                    <input type="text" name="address" id="address">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="username">Korisnicko ime*</label>
+                                    <input type="text" name="username">
+                                </td>
+                                <td>
+                                    <label for="password">Sifra*</label>
+                                    <input type="password" name="password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="email">E-mail*</label>
+                                    <input type="email" name="email" id="address">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="date">Datum rodjenja*</label>
+                                    <input type="date" name="date">
+                                </td>
+                                <td>
+                                    <label for="number">Broj telefona*</label>
+                                    <input type="text" name="number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn">Izmeni</a></td>
+                            </tr>  
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!---------------footer---------------->
+
+    <footer>    
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-2">
+                    <h1>Knjizare Lava</h1>
+                    <img src="slike/logo.png" alt="Logo" width="100px" height="100px">
+                    <p>Nasa namena je da obezbedimo kupcima veliki asortiman razlicitog knjizevnog <br>   sadrzaja i strucnih literatura </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Preuzmite nasu aplikaciju</h3>
+                    <p>Preuzmite aplikaciju za Android i IOS uredjaje</p>
+                    <div class="app-logo">
+                        <img src="slike/app-store.png">
+                        <img src="slike/play-store.png">
+                    </div>
+                </div>
+ 
+                <div class="footer-col-3">
+                    <h3>Zapratite nas</h3>
+                    <ul>
+                        <li> <a href=""> Facebook </a></li>
+                        <li><a href="">Instagram </a></li>
+                        <li><a href="">Twitter</a></li>
+                        <li><a href="">Youtube</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; Copyright 2020 - Knjizare Lava </p>
+        </div>
+    </footer>
+
+
+    <!-- ---------------js------------------>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
