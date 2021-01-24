@@ -15,7 +15,7 @@ function closeMenu() {
 var slike = document.getElementsByClassName("col-4");
 for (var i = 0; i < slike.length; i++) {
     slike.item(i).addEventListener('click', function(e){
-        e.preventDefault(); /*use if you want to prevent the original link following action*/
+        e.preventDefault();
         window.location.href = 'book_details.html';
 
  });
@@ -74,10 +74,10 @@ Reg.addEventListener("click", register);
 //     }
 //   });
 
-popUp.onclick = function(e) {
-    if(e.target != popUp) {
-        console.log('You clicked outside');
-    } else {
-        console.log('You clicked inside');
-    }
-  }
+// popWin.onclick = function(e) {
+//     if(e.target != popWin) {
+//         console.log('You clicked outside');
+//     } else {
+//         console.log('You clicked inside');
+//     }
+//   }

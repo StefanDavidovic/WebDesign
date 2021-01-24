@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
 </head>
 <body>
     
@@ -40,46 +43,46 @@
         <div class="container">
             <div class="row">
                 <div class="form">
-                    <form>
+                    <form id="EditBook" method="POST", action="#">
                         <h1>Izmena detalja o knjizi</h1>
                         <table>
                             <tr>
                                 <td>
                                     <label for="name">Naziv*</label>
-                                    <input type="text" name="name">
+                                    <input type="text" name="ime" id="ime" >
                                 </td>
                                 <td>
                                     <label for="ISBN">ISBN*</label>
-                                    <input type="text" name="ISBN">
+                                    <input type="text" name="ISBN" id="isbn">
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <label for="kuca">Izdavačka kuća*</label>
-                                    <input type="text" name="kuca" id="address">
+                                    <input type="text" name="kuca" id="adresa">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="autor">Autor*</label>
-                                    <input type="text" name="autor">
+                                    <input type="text" name="autor" id="autor">
                                 </td>
                                 <td>
                                     <label for="jezik">Jezik na kome je pisana knjiga*</label>
-                                    <input type="text" name="jezik">
+                                    <input type="text" name="jezik" id="jezik">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="povez">Tip poveza*:</label> <br>
-                                    <select name="povez">
+                                    <select name="povez" id="povez">
                                     <option value="Meki">Meki</option>
                                     <option value="Tvrdi">Tvrdi</option>
                                     </select>
                                 </td>
                                 <td>
                                     <label for="pismo">Pismo*:</label> <br>
-                                    <select name="pismo">
+                                    <select name="pismo" id="pismo">
                                     <option value="Latinica">Latinica</option>
                                     <option value="Cirilica">Cirilica</option>
                                     </select>
@@ -89,41 +92,66 @@
                             <tr>
                                 <td>
                                     <label for="date">Godina izdavanja*</label>
-                                    <input type="date" name="date">
+                                    <input type="date" name="date" id="datum">
                                 </td>
                                 <td>
                                     <label for="number">Prosecna ocena*</label>
-                                    <input type="number" name="number" value="1">
+                                    <input type="number" step="0.01" name="number" value="1" id="ocena">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="cena">Cena*</label>
-                                    <input type="number" name="cena">
+                                    <input type="number" step="0.01" name="cena" id="cena">
                                 </td>
                                 <td>
                                     <label for="strane">Broj strana*</label>
-                                    <input type="number" name="strane">
+                                    <input type="number" name="strane" id="brStrana">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="opis">Opis knjige</label>
-                                    <textarea name="opis" cols="30" rows="10"></textarea>
+                                    <textarea name="opis" cols="30" rows="10" id="opis"></textarea>
                                 </td>
                                 <td>
                                     <label for="slika">Dodaj sliku*</label>
-                                    <input type="file" name="slika" accept="slike/*">
+                                    <input type="file" name="slika" accept="slike/*" id="slika"> 
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="2"><a href="#" class="btn">Izmeni</a></td>
+                                <td colspan="2"><button class="btn" id="btn_submit">Izmeni</button></td>
                             </tr>  
                         </table>
                     </form>
                 </div>
             </div>
         </div>
+
+        <!-- --------------------- login popup -------------- -->
+        <div class="popup" id="popup" >
+            <div class="popup-content" id="popup-content" >
+                <img src="slike/account.png" width="70px">
+
+                <form class="content" id="LoginForm" action="#" method="POST">   
+                    <input type="text" placeholder="Korisnicko Ime"  id="korisnickoIme">
+                    <input type="password" placeholder="Sifra" name="sifra" id="sifra">
+                    <button type="submit" class="btn" id="btn_submit" >Prijava</button> <br>
+                    <a href="#" id="createAcc"><i>Nemate nalog? </i></a>
+                    <a href="#" id="forgotten"> <i> Zaboravio/la sifru? </i></a>
+                </form>
+
+                <form action="#" class="content" id="RegForm" name = "myForm" method="POST">
+                    <input type="text" placeholder="Ime" id="ime">
+                    <input type="text" placeholder="Prezime" id="prezime">
+                    <input type="email" placeholder="Email" id="email">
+                    <input type="text" placeholder="Korisnicko Ime" id="korisnickoIme">
+                    <input type="password" placeholder="Sifra" id="sifra">
+                    <button type="submit" class="btn" id="btn_submit">Registracija</button>
+                </form> 
+            </div>
+        </div>
+        
     </main>
 
     <!---------------footer---------------->
@@ -166,7 +194,12 @@
 
     <!-- ---------------js------------------>
 
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/validacijeKnjige.js"></script>
+    <script src="js/validacijeLogin.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/save-book.js"></script>
+    <!-- <script src="js/load-book.js"></script> -->
 
 </body>
 </html>

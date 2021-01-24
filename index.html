@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
+
+    
 </head>
 <body>
 
@@ -172,22 +177,22 @@
         <div class="popup" id="popup" >
             <div class="popup-content" id="popup-content" >
                 <img src="slike/account.png" width="70px">
-                <form class="content" action="#" id="LoginForm">
-                    
-                    <input type="text" placeholder="Korisnicko Ime">
-                    <input type="password" placeholder="Sifra">
-                    <button type="submit" class="btn">Prijava</button> <br>
+
+                <form class="content" id="LoginForm" action="#" method="POST">   
+                    <input type="text" placeholder="Korisnicko Ime"  id="korisnickoIme">
+                    <input type="password" placeholder="Sifra" name="sifra" id="sifra">
+                    <button type="submit" class="btn" id="btn_submit" >Prijava</button> <br>
                     <a href="#" id="createAcc"><i>Nemate nalog? </i></a>
                     <a href="#" id="forgotten"> <i> Zaboravio/la sifru? </i></a>
                 </form>
 
-                <form action="#" class="content" id="RegForm">
-                    <input type="text" placeholder="Ime">
-                    <input type="text" placeholder="Prezime">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Korisnicko Ime">
-                    <input type="password" placeholder="Sifra">
-                    <button type="submit" class="btn">Registracija</button>
+                <form action="#" class="content" id="RegForm" method="POST">
+                    <input type="text" placeholder="Ime" id="ime">
+                    <input type="text" placeholder="Prezime" id="prezime">
+                    <input type="email" placeholder="Email" id="email">
+                    <input type="text" placeholder="Korisnicko Ime" id="korisnickoImeR">
+                    <input type="password" placeholder="Sifra" id="sifraR">
+                    <button type="submit" class="btn" id="btn_submit">Registracija</button>
                 </form> 
             </div>
         </div>
@@ -235,6 +240,10 @@
     <!-- ---------------js------------------>
 
     <script src="js/main.js"></script>
+    <script src="js/validacijeLogin.js"></script>
+    <script src="js/registration.js"></script>
+
+
 
 </body>
 </html>

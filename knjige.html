@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
 </head>
 <body>
     
@@ -47,259 +50,39 @@
             </div>
 
             
-            <div class="row">
-                <div class="col-4">
-                    <img src="slike/cuprija.jpg">
-                    <h4>Na Drini Cuprija </h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p>Cena: <span>899,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/necista_krv.jpg">
-                    <h4>Necista Krv</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1299,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/evgenije.jpg">
-                    <h4>Evgenije Onjegin</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1499,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/zlocin_i_kazna_.jpg">
-                    <h4>Zlocin i Kazna</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena: <span> 599,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/seobe.jpg">
-                    <h4>Seobe</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1599,99 RSD</span></p>
-                </div>
+            <div class="row" id="glavniDiv">
+ 
             </div>
+                
+        </div>
 
-            <div class="row">
-                <div class="col-4">
-                    <img src="slike/memorial.jpg">
-                    <h4>Na Drini Cuprija </h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p>Cena: <span>899,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/weather.jpg">
-                    <h4>Necista Krv</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1299,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/piranesi.jpg">
-                    <h4>Evgenije Onjegin</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1499,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/zlocin_i_kazna_.jpg">
-                    <h4>Zlocin i Kazna</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena: <span> 599,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/hamnet.jpg">
-                    <h4>Seobe</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1599,99 RSD</span></p>
-                </div>
-            </div>
+        <!-- --------------------- login popup -------------- -->
+        <div class="popup" id="popup" >
+            <div class="popup-content" id="popup-content" >
+                <img src="slike/account.png" width="70px">
 
-            <div class="row">
-                <div class="col-4">
-                    <img src="slike/cuprija.jpg">
-                    <h4>Na Drini Cuprija </h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p>Cena: <span>899,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/necista_krv.jpg">
-                    <h4>Necista Krv</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1299,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/evgenije.jpg">
-                    <h4>Evgenije Onjegin</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1499,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/zlocin_i_kazna_.jpg">
-                    <h4>Zlocin i Kazna</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena: <span> 599,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/seobe.jpg">
-                    <h4>Seobe</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1599,99 RSD</span></p>
-                </div>
-            </div>
+                <form class="content" id="LoginForm" action="#" method="POST">   
+                    <input type="text" placeholder="Korisnicko Ime"  id="korisnickoIme">
+                    <input type="password" placeholder="Sifra" name="sifra" id="sifra">
+                    <button type="submit" class="btn" id="btn_submit" >Prijava</button> <br>
+                    <a href="#" id="createAcc"><i>Nemate nalog? </i></a>
+                    <a href="#" id="forgotten"> <i> Zaboravio/la sifru? </i></a>
+                </form>
 
-            <div class="row">
-                <div class="col-4">
-                    <img src="slike/piranesi.jpg">
-                    <h4>Na Drini Cuprija </h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                    </div>
-                    <p>Cena: <span>899,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/hamnet.jpg">
-                    <h4>Necista Krv</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1299,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/weather.jpg">
-                    <h4>Evgenije Onjegin</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1499,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/piranesi.jpg">
-                    <h4>Zlocin i Kazna</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena: <span> 599,99 RSD</span></p>
-                </div>
-                <div class="col-4">
-                    <img src="slike/memorial.jpg">
-                    <h4>Seobe</h4>
-                    <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                        <i class="fa fa-star-o"></i>
-                    </div>
-                    <p>Cena:<span> 1599,99 RSD</span></p>
-                </div>
+                <form action="#" class="content" id="RegForm" name = "myForm" method="POST">
+                    <input type="text" placeholder="Ime" id="ime">
+                    <input type="text" placeholder="Prezime" id="prezime">
+                    <input type="email" placeholder="Email" id="email">
+                    <input type="text" placeholder="Korisnicko Ime" id="korisnickoIme">
+                    <input type="password" placeholder="Sifra" id="sifra">
+                    <button type="submit" class="btn" id="btn_submit">Registracija</button>
+                </form> 
             </div>
         </div>
     </main>
+
+
+ 
 
     <!---------------footer---------------->
 
@@ -342,6 +125,9 @@
     <!-- ---------------js------------------>
 
     <script src="js/main.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/load-book.js"></script>
+    
 
 </body>
 </html>

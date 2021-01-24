@@ -386,6 +386,17 @@ form a{
     left: -600px;
 }
 
+.valid{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.valid i{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
 /* ---------- shoppingCart -------  */
 
 .cart-page{
@@ -514,6 +525,16 @@ input[type="file"] {
 
 }
 
+#EditUser #adresa{
+    width: 95%;
+}
+
+#EditUser #email{
+    width: 95%;
+}
+
+
+
 .form h1{
     text-align: center;
     margin: 17px;
@@ -552,6 +573,7 @@ input[type="file"]{
 .form select{
     border: 1px solid black;
 }
+
 
 
 /* ------------media queries--------- */
