@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-database.js"></script>
 </head>
 <body>
     
@@ -37,11 +41,21 @@
     
 
     <main>
-        <div class="container single-product">
-            <div class="row">
-                <col-2>
+        <div class="container single-product" id="single-product">
+
+
+            <!-- <ul class="rating">
+                <li class="rating-item" data-rate='1'></li>
+                <li class="rating-item" data-rate='2'></li>
+                <li class="rating-item" data-rate='3'></li>
+                <li class="rating-item" data-rate='4'></li>
+                <li class="rating-item" data-rate='5'></li>
+            </ul> -->
+
+            <!-- <div class="row">
+                <div class="col-2">
                     <img src="slike/cuprija.jpg">
-                </col-2>
+                </div>
                 <div class="col-2">
                     <p>Home / Book</p>
                     <h1>Na Drini Cuprija</h1>
@@ -50,12 +64,14 @@
                     <input type="number" value="1">
                     <a class="btn">Dodaj U Korpu</a>
 
+                    <p>Povez: <em>Meki</em> </p>
+
                     <h4>O Knjizi</h4>
                     <p> <i> Na Drini ćuprija je poveesni roman Ive Andrića. Delo je napisano i prvi put objavljeno 1945. godine.Roman je napisan na srpskoj ekavici. 
                         Sintaksa mu je svojstvena katkad hrvatskom jeziku. Izražaj je prilično jednostavan i lako razumljiv. U djelu nalazimo mnogo primjera narodnih elemenata, 
                         od pjesama i legendi do običaja i svjetonazora. Velika važnost se pridaje opisima, kako vanjskim tako i psihološkim.</i> </p>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <div class="container">
@@ -164,8 +180,9 @@
 
 
     <!-- ---------------js------------------>
-
+    <script src="js/load-book.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/singleBook.js"></script>
 
 </body>
 </html>
